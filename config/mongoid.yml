@@ -1,0 +1,10 @@
+development:
+  host: localhost
+  database: resource_library_test_development
+
+test:
+  host: localhost
+  database: resource_library_test_test
+
+production:
+  uri: <%= ENV['MONGOHQ_URL'] %>

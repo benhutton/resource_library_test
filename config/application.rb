@@ -15,6 +15,10 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+  ENV["RACK_ENV"] = Rails.env  # had to explicity state the test environment (or cucumber env.)
+  require 'mongoid'
+  Mongoid.load!(File.expand_path(File.dirname(__FILE__) + '/mongoid.yml'))
+
 module ResourceLibraryTest
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
