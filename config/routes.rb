@@ -1,5 +1,5 @@
 ResourceLibraryTest::Application.routes.draw do
-  mount ResourceLibrary::Engine => "/resource-library"
+  mount ResourceLibrary::Engine => "/"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
