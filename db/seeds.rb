@@ -35,8 +35,15 @@ module ResourceLibrary
   
   # Create some categories
   sermons = Category.create(title: "Sermons", default_grouping_type_id: topic.id)
+  sermons.grouping_types << topic
+  sermons.grouping_types << author
   articles = Category.create(title: "Articles", default_grouping_type_id: topic.id)
+  articles.grouping_types << topic
+  articles.grouping_types << author
   seminary_training = Category.create(title: "Seminary Training", default_grouping_type_id: course.id)
+  seminary_training.grouping_types << topic
+  seminary_training.grouping_types << author
+  seminary_training.grouping_types << course
 
   puts "#{Category.count} categories"
   puts "#{GroupingType.count} grouping types"
