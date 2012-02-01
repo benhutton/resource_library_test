@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:benhutton/resource_library.git
-  revision: 9a4b2a6adfcb4b4c3febe1e0a67af61ddca65ae6
+  revision: 401779c70a31c01edebf56023bcc9af73d4282b0
   specs:
     resource_library (0.0.1)
       bson_ext (~> 1.5)
